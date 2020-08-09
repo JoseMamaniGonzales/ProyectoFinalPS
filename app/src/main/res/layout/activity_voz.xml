@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context=".Voz">
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="169dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="INGRESO DE INFORMACIÓN"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/formulario"
+        android:layout_width="327dp"
+        android:layout_height="405dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="149dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="TEMA"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/textoTema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre "
+            android:inputType="textPersonName"
+            android:textColorLink="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPCION"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/TextoHablado"
+                android:layout_width="274dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:hint="Ingrese texto..."
+                android:textColor="#000000"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/imagenMicro"
+                android:layout_width="39dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="100dp"
+                android:onClick="onClickImgBtnHablar"
+                android:scaleType="fitXY"
+                app:srcCompat="@android:drawable/ic_btn_speak_now"
+                tools:srcCompat="@android:drawable/ic_btn_speak_now" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fecha"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="FECHA" />
+
+            <TextView
+                android:id="@+id/text_fecha"
+                android:layout_width="142dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="----"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hora"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:text="HORA" />
+
+            <TextView
+                android:id="@+id/text_hora"
+                android:layout_width="142dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="----"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="154dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/formulario"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/boton_general"
+        android:onClick="registro"
+        android:text="ENVIAR"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>
