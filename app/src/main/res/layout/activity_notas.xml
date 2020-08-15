@@ -16,7 +16,7 @@
         android:gravity="center"
         android:text="INGRESO DE NOTAS"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <FrameLayout
@@ -38,12 +38,13 @@
                 android:layout_width="300dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
+                android:background="#00FFFFFF"
                 android:orientation="vertical">
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -74,7 +75,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -105,7 +106,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -136,7 +137,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -167,7 +168,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -198,7 +199,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:background="@drawable/rectangular">
+                    android:background="@color/colorNota">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,7 +241,8 @@
         android:background="@drawable/boton_general"
         android:onClick="calcular"
         android:text="CALCULAR"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/notaFinal"

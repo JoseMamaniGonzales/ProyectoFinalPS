@@ -27,9 +27,10 @@
                 android:layout_width="180dp"
                 android:layout_height="160dp"
                 android:layout_gravity="center"
+                android:background="#00FFFFFF"
                 android:onClick="goLista"
                 android:scaleType="fitXY"
-                app:srcCompat="@android:drawable/ic_menu_agenda" />
+                app:srcCompat="@drawable/evento" />
         </FrameLayout>
 
         <FrameLayout
@@ -41,9 +42,10 @@
                 android:layout_width="180dp"
                 android:layout_height="160dp"
                 android:layout_gravity="center"
+                android:background="#00FFFFFF"
                 android:onClick="goNotas"
                 android:scaleType="fitXY"
-                app:srcCompat="@android:drawable/ic_menu_edit" />
+                app:srcCompat="@drawable/promedio" />
         </FrameLayout>
     </LinearLayout>
 

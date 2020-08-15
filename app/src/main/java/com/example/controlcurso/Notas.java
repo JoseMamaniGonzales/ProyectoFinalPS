@@ -49,12 +49,49 @@ public class Notas extends AppCompatActivity {
         double dato4 = dato3/100.0;
         return dato4;
     }
-
-    public void calcular(View v) {
+    public int convertirEntero(Spinner dato){
+        String dato1 = dato.getSelectedItem().toString();
+        String dato2 = dato1.substring(0,dato1.length()-1);
+        int dato3 = Integer.parseInt(dato2);
+        return dato3;
+    }
+    public boolean camposVacio(){
         if(uno.getText().toString().isEmpty() || dos.getText().toString().isEmpty()
                 || tres.getText().toString().isEmpty()|| cuatro.getText().toString().isEmpty()
                 || cinco.getText().toString().isEmpty()|| seis.getText().toString().isEmpty()){
             Toast.makeText(this, "Campos incorrectos", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+    public boolean numErroneo(){
+        int a=Integer.parseInt(uno.getText().toString());
+        int b=Integer.parseInt(dos.getText().toString());
+        int c=Integer.parseInt(tres.getText().toString());
+        int d=Integer.parseInt(cuatro.getText().toString());
+        int e=Integer.parseInt(cinco.getText().toString());
+        int f=Integer.parseInt(seis.getText().toString());
+
+        if((a>20||a<0)||(b>20||b<0)||(c>20||c<0)||(d>20||d<0)||
+                (e>20||e<0)||(f>20||f<0)){
+            Toast.makeText(this, "Notas erroneas", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+    public boolean porErroneo(){
+        int suma=convertirEntero(lista1)+convertirEntero(lista2)+convertirEntero(lista3)+
+                convertirEntero(lista4)+convertirEntero(lista5)+convertirEntero(lista6);
+
+        if(suma!=100){
+            Toast.makeText(this, "Porcentajes erroneos", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        return false;
+    }
+    public void calcular(View v) {
+        nota.setText("--");
+        if(camposVacio()||numErroneo()||porErroneo()){
 
         }else {
             double datoCalculado;
@@ -66,7 +103,7 @@ public class Notas extends AppCompatActivity {
         }
     }
     public void cargarLista(){
-        String[] datos = new String[] {"25%", "20%", "18%", "16%", "15%", "10%"};
+        String[] datos = new String[] {"30%", "25%", "20%", "18%", "16%", "15%", "10%"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, datos);
         lista1.setAdapter(adapter);
